@@ -1,4 +1,4 @@
-
+from stats import word_count
 
 def get_book_text ():
     """
@@ -13,22 +13,20 @@ def get_book_text ():
         book = book_content.read()
     # print(book)
     
-    words = book.split()
-    print(f"Found {len(words)} total words")
-    
-    
-    return
+    return book
+
+current_book = get_book_text()
 
 """
-def word_count():
-    words = book.split
-    print(len(words))
+def word_count(book):
+    words = book.split()
+    print(f"Found {len(words)} total words")
     return
 """
 
 def main():
     get_book_text()
-    # word_count()
+    word_count(current_book)
     return
 
 
