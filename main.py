@@ -1,4 +1,4 @@
-from stats import word_count
+from stats import word_count, char_count, char_list_expand
 
 def get_book_text ():
     """
@@ -16,6 +16,7 @@ def get_book_text ():
     return book
 
 current_book = get_book_text()
+char_list = char_count(current_book)
 
 """
 def word_count(book):
@@ -27,6 +28,8 @@ def word_count(book):
 def main():
     get_book_text()
     word_count(current_book)
+    char_count(current_book)
+    char_list_expand(char_list)
     return
 
 
