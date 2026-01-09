@@ -22,6 +22,7 @@ def sort_on(chars):
 
 def char_list_expand(char_count):
     char_list = []
+    new_char_dict = {}
     
     
     for char in char_count:
@@ -35,4 +36,11 @@ def char_list_expand(char_count):
             continue
     char_list.sort(reverse=True, key=sort_on)
 
-    print(char_list)
+    for dict in char_list:
+        # print(dict["char"])
+        # print(dict["num"])
+        
+        new_char_dict[dict["char"]] = dict["num"]
+
+    for line in new_char_dict:
+        print(f"{line}: {new_char_dict[line]}")
